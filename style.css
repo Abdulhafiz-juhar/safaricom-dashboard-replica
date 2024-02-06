@@ -6,45 +6,74 @@
 
 .container {
   display: grid;
-  grid-template: 1fr 8fr / 3fr 8fr;
+  grid-template: 1fr 18fr / 3fr 8fr;
   grid-template-areas:
     "sidebar navbar"
     "sidebar main";
+  gap: 1rem;
 }
 
 .sidebar {
   grid-area: sidebar;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 1rem;
 }
 
 .logoMenu {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+  gap: 1rem;
 }
 
-.sidebar svg {
+.logoMenu logo svg {
+  width: 150px;
+}
+
+.logoMenu .menu {
+  padding: 1rem;
+}
+
+.menuOptions {
+  padding: 0 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.menuOptions svg {
   width: 20px;
 }
 
 .menuOptions > div {
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 0.5rem;
 }
 
 .userDetails {
+  align-self: end;
   display: grid;
   grid-template: auto auto / auto auto;
   grid-template-areas:
     "acronym name"
     "acronym email";
+  align-items: center;
+  padding: 0.7rem;
+  border-top: solid rgba(0, 0, 0, 0.3);
+  gap: 0.3rem;
 }
 
 .acronym {
   grid-area: acronym;
+  border: solid;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
 }
 
 .name {
   grid-area: name;
+  font-weight: bold;
 }
 
 .email {
@@ -53,8 +82,62 @@
 
 .navbar {
   grid-area: navbar;
+  background-color: #28c45c;
+  display: grid;
+  place-items: center end;
+  padding: 0.5rem;
+}
+
+.acronym-nav {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: orange;
+  color: white;
 }
 
 .main {
   grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "dr graph"
+    "ums graph"
+    "ams graph";
+}
+.downloadReport {
+  grid-area: dr;
+}
+.downloadReport Button {
+  padding: 0.4rem 0.8rem;
+  background-color: #28c45c;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+}
+
+.ums {
+  grid-area: ums;
+  /* display: grid; */
+}
+
+.ums p:nth-child(1),
+.ums p:nth-child(2) {
+  font-weight: bold;
+}
+
+.ums div {
+  border: solid;
+}
+
+.ams {
+  grid-area: ams;
+}
+.ams p:nth-child(1),
+.ams p:nth-child(2) {
+  font-weight: bold;
+}
+.details {
+  grid-area: graph;
+}
+.details img {
+  width: 100%;
 }
