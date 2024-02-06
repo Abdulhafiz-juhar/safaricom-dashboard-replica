@@ -1,2 +1,60 @@
-body {
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template: 1fr 8fr / 3fr 8fr;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.logoMenu {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.sidebar svg {
+  width: 20px;
+}
+
+.menuOptions > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.userDetails {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  grid-template-areas:
+    "acronym name"
+    "acronym email";
+}
+
+.acronym {
+  grid-area: acronym;
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.main {
+  grid-area: main;
 }
