@@ -149,6 +149,7 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border: none;
+  display: grid;
 }
 
 .ums p,
@@ -156,22 +157,37 @@ body {
   margin: 0.5rem;
 }
 
-.ums p:nth-child(1),
-.ums p:nth-child(2) {
+.ums > p:nth-child(1),
+.ums > p:nth-child(2) {
   font-weight: bold;
 }
 
-.ums div {
-  border: solid;
+.ums div,
+.ams div:not(.ams-details) {
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+.ums div:empty,
+.ams div:empty {
+  height: 0;
 }
 
 .ams {
   grid-area: ams;
   padding: 1rem;
 }
-.ams p:nth-child(1),
-.ams p:nth-child(2) {
+.ams > p:nth-child(1),
+.ams > p:nth-child(2) {
   font-weight: bold;
+}
+.ams-details {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+}
+.ams-details div {
+  transform: rotateZ(90deg);
+  width: 15px;
 }
 .details {
   grid-area: graph;
