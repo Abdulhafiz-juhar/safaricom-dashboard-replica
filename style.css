@@ -200,3 +200,27 @@ body {
 .details img {
   width: 80%;
 }
+
+/* onclick of menu styles */
+div .text,
+.logoMenu .logo,
+.userDetails .name,
+.userDetails .email {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.container {
+  grid-template: 1fr 18fr / auto 10fr;
+  grid-template-areas:
+    "sidebar navbar"
+    "sidebar main";
+}
+.sidebar div:has(> div) {
+  background-color: green;
+  justify-items: center;
+}
+
+.logoMenu {
+  grid-template-columns: auto;
+}
