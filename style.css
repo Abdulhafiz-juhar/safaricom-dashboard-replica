@@ -44,6 +44,11 @@ body {
   place-self: center;
 }
 
+.logoMenu .menu:hover {
+  background-color: #cdcece;
+  /* transform: scaleX(-1); */
+}
+
 .menuOptions {
   padding: 0 1.5rem;
   display: grid;
