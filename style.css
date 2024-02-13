@@ -202,7 +202,7 @@ body {
 }
 
 /* onclick of menu styles */
-div .text,
+/* div .text,
 .logoMenu .logo,
 .userDetails .name,
 .userDetails .email {
@@ -223,4 +223,4 @@ div .text,
 
 .logoMenu {
   grid-template-columns: auto;
-}
+} */
