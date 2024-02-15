@@ -186,7 +186,40 @@
         </div>
         <div class="details">
           <!-- Temporary image -->
-          <img src="images/chart.png" alt="chart" />
+          <!-- <img src="images/chart.png" alt="chart" /> -->
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <script>
+            const ctx = document.getElementById("myChart");
+
+            new Chart(ctx, {
+              type: "radar",
+              data: {
+                labels: ["Available", "Locked", "Assigned"],
+                datasets: [
+                  {
+                    label: "phone",
+                    data: [0, , 40],
+                    borderWidth: 1,
+                  },
+                  {
+                    label: "SIM card",
+                    data: [0, , 40],
+                    borderWidth: 1,
+                  },
+                  {
+                    label: "Airtime",
+                    data: [0, , 40],
+                    borderWidth: 1,
+                  },
+                ],
+              },
+            });
+          </script>
         </div>
       </div>
     </div>

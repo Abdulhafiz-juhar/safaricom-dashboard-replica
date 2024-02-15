@@ -127,7 +127,8 @@ body {
   grid-template-areas:
     "dr graph"
     "ums graph"
-    "ams graph";
+    "ams graph"
+    ". graph";
   align-content: start;
   gap: 1rem;
   padding: 1rem;
