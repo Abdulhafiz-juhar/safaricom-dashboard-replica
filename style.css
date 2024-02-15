@@ -42,6 +42,7 @@ body {
   border-radius: 0.3rem;
   background: #f9fafb;
   place-self: center;
+  margin: 11px 0;
 }
 
 .logoMenu .menu:hover {
@@ -224,3 +225,7 @@ body {
 .logoMenu {
   grid-template-columns: auto;
 } */
+
+.sidebar * {
+  transition: all 0.5s;
+}

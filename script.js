@@ -15,6 +15,35 @@ let logoMenuElement = document.querySelector(".logoMenu");
 menuButton.addEventListener("click", function () {
   if (isFlipped) {
     this.style.transform = "scaleX(1)";
+    textElements.forEach(function (element) {
+      element.style.display = "";
+      element.style.width = "";
+      element.style.height = "";
+    });
+
+    logoElements.forEach(function (element) {
+      element.style.display = "";
+      element.style.width = "";
+      element.style.height = "";
+    });
+
+    nameElements.forEach(function (element) {
+      element.style.display = "";
+      element.style.width = "";
+      element.style.height = "";
+    });
+
+    emailElements.forEach(function (element) {
+      element.style.display = "";
+      element.style.width = "";
+      element.style.height = "";
+    });
+    sidebarDivsWithChildren.forEach(function (element) {
+      element.style.justifyItems = "";
+    });
+    containerElement.style.gridTemplate = "";
+    containerElement.style.gridTemplateAreas = "";
+    logoMenuElement.style.gridTemplateColumns = "";
   } else {
     this.style.transform = "scaleX(-1)";
     textElements.forEach(function (element) {
@@ -51,3 +80,5 @@ menuButton.addEventListener("click", function () {
 
   isFlipped = !isFlipped;
 });
+
+// make the menu collapse slowly like animation style
